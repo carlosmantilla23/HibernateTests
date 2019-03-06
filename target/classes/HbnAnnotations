@@ -1,0 +1,7 @@
+Hibernate Annotations:
+
+@Entity: Se aplica a la clase e indica que esta clase es una entidad a persistir.
+@Table: Se aplica a la clase indica el nombre de la tabla de la base de datos.
+@Column: Se aplica a una propiedad Java e indica el nombre de la columna de la tabla.
+@Id: Se aplica a una propiedad de la clase e indica que es la clave primaria.
+@GeneratedValue: Indica que Hibernate deberá generar el valor de la clave primaria
