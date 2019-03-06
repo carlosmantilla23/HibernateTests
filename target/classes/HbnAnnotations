@@ -5,3 +5,19 @@ Hibernate Annotations:
 @Column: Se aplica a una propiedad Java e indica el nombre de la columna de la tabla.
 @Id: Se aplica a una propiedad de la clase e indica que es la clave primaria.
 @GeneratedValue: Indica que Hibernate deberá generar el valor de la clave primaria
+
+
+Hibernate Asociations:
+
+ANNOTATION: @OneToOne(cascade=CascadeType.ALL)
+One to one (Unidireccional): Un objeto tiene referencia de otro objeto. Ej. Una persona solo puede tener un email.
+One to one (Bidireccional): Los dos objetos tienen referencias uno de otro. Ej. Una persona solo puede tener un email y un email solo pertenece a una persona.
+	
+ANNOTATION: @OneToMany(mappedBy="entity", ascade=CascadeType.ALL)
+			@ManyToOne
+ANNOTATION: @JoinColumn
+One to Many: Un objeto tenga una lista de otros objetos
+
+ANNOTATION @ManyToMany(cascade={CascadeType.ALL})
+		   @JoinTable(name="entityMaped", joinColumns= {@JoinColumn(name="campoTablaPadre")},inverseJoinColumns = {@JoinColumn(name="campoTablaHijo")})
+Many To Many: Un objeto A tenga una lista de otros objetos B y también que el objeto B a su vez tenga la lista de objetos A
