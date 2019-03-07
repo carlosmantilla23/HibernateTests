@@ -42,11 +42,11 @@ public class Course implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getTheme() {
+	public String getThemes() {
 		return themes;
 	}
-	public void setTheme(String theme) {
-		this.themes = theme;
+	public void setThemes(String themes) {
+		this.themes = themes;
 	}
 	public String getProject() {
 		return project;
@@ -60,10 +60,10 @@ public class Course implements Serializable {
 	public void setIdTeacher(Teacher idTeacher) {
 		this.idTeacher = idTeacher;
 	}
-	public Course(String name, String theme, String project, Teacher idTeacher) {
+	public Course(String name, String themes, String project, Teacher idTeacher) {
 		super();
 		this.name = name;
-		this.theme = theme;
+		this.themes = themes;
 		this.project = project;
 		this.idTeacher = idTeacher;
 	}

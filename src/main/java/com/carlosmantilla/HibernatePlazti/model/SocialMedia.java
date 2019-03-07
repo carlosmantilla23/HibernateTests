@@ -3,11 +3,14 @@ package com.carlosmantilla.HibernatePlazti.model;
 import java.io.Serializable;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -26,6 +29,8 @@ public class SocialMedia implements Serializable {
 	@Column(name="icon")
 	private String icon;
 	
+	@OneToMany
+	@JoinColumn(name="id_social_media")
 	private Set<Teacher> TeacherSocialMedias; 
 	
 	public Set<Teacher> getTeacherSocialMedias() {
