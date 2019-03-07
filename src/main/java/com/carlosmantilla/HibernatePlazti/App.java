@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.carlosmantilla.HibernatePlazti.model.Course;
 import com.carlosmantilla.HibernatePlazti.model.Teacher;
 
 /**
@@ -19,6 +20,11 @@ public class App {
 		configuration.configure();
 		sessionFactory = configuration.buildSessionFactory();
 		Session session = sessionFactory.openSession();
-
+		
+//		Teacher teacher = new Teacher("Carlos Mantilla", "URLAVATAR");
+		Course course = new Course("Java Avanzado", "Tema 1", "Rest API");
+		session.beginTransaction();
+		session.save(course);
+		session.getTransaction().commit();
 	}
 }

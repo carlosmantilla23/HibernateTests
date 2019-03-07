@@ -24,12 +24,12 @@ public class TeacherSocialMedia implements Serializable {
 	@Column(name = "nickname")
 	private String nickname;
 
-	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="id_teacher")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_teacher")
 	private Teacher teacher;
 
-	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="id_social_media")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_social_media")
 	private SocialMedia socialMedia;
 
 	public Long getIdTeacherSocialMedia() {
