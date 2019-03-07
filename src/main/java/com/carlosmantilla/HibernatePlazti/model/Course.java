@@ -80,7 +80,6 @@ public class Course implements Serializable {
 		this.name = name;
 		this.themes = themes;
 		this.project = project;
-		this.teacher = teacher;
 	}
 
 	public Course() {
