@@ -21,3 +21,4 @@ One to Many: Un objeto tenga una lista de otros objetos
 ANNOTATION @ManyToMany(cascade={CascadeType.ALL})
 		   @JoinTable(name="entityMaped", joinColumns= {@JoinColumn(name="campoTablaPadre")},inverseJoinColumns = {@JoinColumn(name="campoTablaHijo")})
 Many To Many: Un objeto A tenga una lista de otros objetos B y también que el objeto B a su vez tenga la lista de objetos A
+

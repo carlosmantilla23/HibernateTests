@@ -1,4 +1,4 @@
-package com.carlosmantilla.HibernatePlazti.model;
+package com.carlosmantilla.hibernateplatzi.model;
 
 import java.io.Serializable;
 
