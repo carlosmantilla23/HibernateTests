@@ -14,17 +14,19 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 
-		
+		//CREATE TEACHER
 		Teacher teacher = new Teacher("Diana Bueno", "URLAVATARCHIQUI");
 		TeacherDAOImpl teacherDAOImpl = new TeacherDAOImpl();
 		teacherDAOImpl.saveTeacher(teacher);
 		
+		//FIND ALL
 		List <Teacher> teachers =teacherDAOImpl.findAllTeachers();
 		
 		for (Teacher t : teachers) {
 			System.out.println("Nombre: " + t.getName());
 		}
-
+		
+		//UPDATE
 		teacher = teacherDAOImpl.findById((long) 3);
 		teacher.setName("Diana Bueno Bueno");
 		teacherDAOImpl.updateTeacher(teacher);
